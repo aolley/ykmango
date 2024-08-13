@@ -11,7 +11,7 @@ import (
 // List returns all currently configured OATH slot names
 func List() ([]string, error) {
 
-	cmd := exec.Command("ykman", "oath", "list")
+	cmd := exec.Command("ykman", "oath", "accounts", "list")
 
 	output, err := cmd.CombinedOutput()
 

@@ -12,7 +12,7 @@ import (
 // Generate returns an OATH code from the specified slot name
 func Generate(name string) (string, error) {
 
-	cmd := exec.Command("ykman", "oath", "code", name)
+	cmd := exec.Command("ykman", "oath", "accounts", "code", name)
 
 	output, err := cmd.CombinedOutput()
 
